@@ -2,19 +2,17 @@
 	import SlotTest from 'slot-test';
 	import Baz from './Baz.svelte';
 
-	let bookings = ['one', 'two', 'three'];
-
-	function handleEmpty() {
-		bookings = []
-	}
+	let show = true;
 </script>
 
-<button on:click={handleEmpty}>
-	Empty bookings
+<button on:click={()=> show = false}>
+	Hide
 </button>
 
-{#each bookings as booking}
-<SlotTest>
-	<Baz></Baz>
-</SlotTest>
-{/each}
+<div>
+	{#if show }
+		<SlotTest>
+			<Baz></Baz>
+		</SlotTest>
+	{/if}
+</div>
