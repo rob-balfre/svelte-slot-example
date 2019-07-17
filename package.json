@@ -18,6 +18,6 @@
     "dev": "webpack-dev-server --content-base public"
   },
   "dependencies": {
-    "slot-test": "^0.0.1"
+    "fake-component-lib": "^0.0.4"
   }
 }

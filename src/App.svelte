@@ -1,7 +1,6 @@
 <script>
-	import SlotTest from 'slot-test';
-	import Baz from './Baz.svelte';
-
+	import Baz from 'fake-component-lib/Baz';
+	
 	let show = true;
 </script>
 
@@ -11,8 +10,6 @@
 
 <div>
 	{#if show }
-		<SlotTest>
-			<Baz></Baz>
-		</SlotTest>
+		<Baz></Baz>
 	{/if}
 </div>

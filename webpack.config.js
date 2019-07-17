@@ -8,7 +8,8 @@ module.exports = {
 		bundle: ['./src/main.js']
 	},
 	resolve: {
-		extensions: ['.mjs', '.js', '.svelte']
+		extensions: ['.mjs', '.js', '.svelte'],
+		mainFields: ['svelte', 'browser', 'module', 'main']
 	},
 	output: {
 		path: __dirname + '/public',
@@ -19,7 +20,6 @@ module.exports = {
 		rules: [
 			{
 				test: /\.svelte$/,
-				exclude: /node_modules/,
 				use: {
 					loader: 'svelte-loader',
 					options: {
@@ -47,5 +47,5 @@ module.exports = {
 			filename: '[name].css'
 		})
 	],
-	devtool: prod ? false: 'source-map'
+	devtool: prod ? false : 'source-map'
 };
