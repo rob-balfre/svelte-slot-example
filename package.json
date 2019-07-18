@@ -18,6 +18,6 @@
     "dev": "webpack-dev-server --content-base public"
   },
   "dependencies": {
-    "fake-component-lib": "^0.0.4"
+    "fake-component-lib": "^0.0.5"
   }
 }
